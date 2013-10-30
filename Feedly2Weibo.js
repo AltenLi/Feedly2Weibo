@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name       Feeldy Share To Weibo
 // @namespace  http://altenli.diandian.com/
-// @version    0.5
+// @version    0.8
 // @author     AltenLi
 // @description  When You Use Feedly, Expand one news, Then You Can Click the Sina Button On the right top to share it. 当你使用Feedly并展开着某一个新闻的时候，点击右上角的新浪小图标来分享到微薄
 // @include    http://cloud.feedly.com*
 // @include    https://cloud.feedly.com*
+// @updateURL      https://userscripts.org/scripts/source/176219.meta.js
+// @downloadURL    https://userscripts.org/scripts/source/176219.user.js
 // @copyright  2013+, AltenLi
 // @run-at     document-end
 // ==/UserScript==
@@ -70,7 +72,7 @@ function ShareToWeibo() {
             var param = {
                 url: c[i].href,
                 type: '3',
-                title: c[i].innerHTML+"--分享自Feedly",
+                title: c[i].innerHTML.replace("&nbsp;"," "),
                 /**分享的文字内容(可选，默认为所在页面的title)*/
                 language: 'zh_cn',
                 appkey:'1774990684',
@@ -118,7 +120,7 @@ setTimeout(function() {
         addPageButton(c[i], d[0]);
 
     }
-	console.log("Added OK");
+    console.log("Added OK");
 }, 10000);
 }
 catch(e)
