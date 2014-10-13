@@ -8,11 +8,11 @@ Feedly Share To Weibo(TemperMonkey Script)
 当你使用Feedly并展开着某一个新闻的时候，点击右上角的新浪小图标来分享到微薄
 
 安装： Chrome用户，安装TamperMonkey， 
-       再打开网址 http://userscripts.org/scripts/show/176219 
-	   点击INSTALL即可
+       请把脚本手动添加到TamperMonkey里~谢谢！
 
 这是第一次写脚本~如有不足之处，还请留言~~
 
+v0.9 修改Feedly网址匹配信息
 
 v0.8 删除"--分享自Feedly"
  
